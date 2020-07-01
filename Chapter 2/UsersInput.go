@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func main() {
@@ -29,10 +31,24 @@ func main() {
 	if err != nil { //<- Если err не nil то дропаемся
 		log.Fatal(err)
 	}
-	fmt.Println(input5) //Report the error && stops the program
+	fmt.Println(input5)
 
 	//My Example
 	//fmt.Scan(&myInput)
-
 	//fmt.Println(input)
+
+	//let's Trim the newline character
+	input5 = strings.Trim(input5)
+	grade, err := strconv.ParseFloat(input5, 64)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if grade >= 60 {
+		status := "passing"
+		fmt.Println(status)
+	} else {
+		status := "faling"
+		fmt.Println(status)
+
+	}
 }
