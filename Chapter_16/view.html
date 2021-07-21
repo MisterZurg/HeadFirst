@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Would you like to sign my petition?</h1>
+<div>
+    <!--  X total signatures -->
+    {{.SignatureCount}} total signatures -
+    <a href="/guestbook/new">Add Your Signature</a>
+</div>
+<div>
+    <!--
+    <p>Signatures</p>
+    <p>go</p>
+    <p>here</p>
+    -->
+    {{range .Signatures}}
+    <p>{{.}}</p>
+    {{end}}
+</div>
+</body>
+</html>
