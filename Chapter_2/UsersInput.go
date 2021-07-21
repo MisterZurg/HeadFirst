@@ -38,7 +38,7 @@ func main() {
 	//fmt.Println(input)
 
 	//let's Trim the newline character
-	input5 = strings.Trim(input5)
+	input5 = strings.Trim(input5, "\n")
 	grade, err := strconv.ParseFloat(input5, 64)
 	if err != nil {
 		log.Fatal(err)
